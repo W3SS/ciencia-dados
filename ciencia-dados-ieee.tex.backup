@@ -450,25 +450,59 @@ Para atingir os objetivos acima, utilizamos 3 datasets fornecidos no site do CEN
 \end{enumerate}
 
 O dataset "Aeronaves" contém informações sobre as aeronaves envolvidas no incidente, relevante a este estudo são as informações de \textbf{equipamento, fabricante, modelo, 
-tipo motor, fase da operação, tipo da operação}
-O dataset "Ocorrencias" cont´em informaç~oes sobre o ocorrido, relevantes a este estudo s~ao as informaç~oes de \textbf{ tipo, localidade e aerodromo }
-Finalmente o dataset
-
-
+tipo motor, fase da operação}
+O dataset "Ocorrencias" contém informações sobre o ocorrido, relevantes a este estudo são as informaçães de \textbf{ tipo, localidade e aerodromo }
+Finalmente o dataset de fatores contribuintes contem os dados de \textbf{ fator, aspecto e condicionante } dos incidentes ocorridos com as aeronaves.
 
 \subsection{Planejamento}
 
-Perguntas que queremos responder com este relatório
+Como mencionado anteriormente, este estudo tem o objetivo de desmistificar ou confirmar alguns fatos relacionados a aviação no Brasil. Perguntas que estamos tentando
+responder são: 
 
-\section{Coleta dos dados e qualidade dos dados}
+\begin{itemize}
+ \item Qual fabricante esta mais envolvido em incidente? Há uma percepção na população menos informada que os Airbus tem participado de incidentes aéreos com mais frequência
+ que os Boeings.
+ \item A maioria dos incidentes aconteceu na decolagem ou no pouso? Em várias entrevistas, especialistas em aviação são categóricos em afirmar que essas duas fases são as
+ mais perigosas
+ \item A maioria dos incidentes esta realmente relacionado a falha humana? Como no anterior, especialistas em aviação afirmam que, dado o nível de automatização e salvaguardas 
+ presente hoje nas aeronaves, incidentes são geralmente causados por intervenção humana.
+ \item Outros?
+\end{itemize}
 
-Como os dados são coletados no CENIPA e o que tivemos que realizar nos dados para que eles fossem utilizáveis
 
-\section{Descrever}
+\subsection{Coleta dos dados e qualidade dos dados}
 
-Descrever os campos que compoem os dados
+O método investigativo do SIPAER utiliza probabilidades e hipoeteses para esclarecer as causas e os fatores contribuintes de um incidente aéreo. O CENIPA mantém um 
+cemitério de aeronaves que usa para estudos e como base histérica de acidentes passados, combinado com a obtenção de declaraçóes voluntária de observadores e dados do 
+gravador de vôo da aeronave, formula-se um relatório que tem, entre outras informações, o que se acredita serem as causas e os fatores contribuintes além de recomendações
+às companhias aéreas para evitar que um incidente parecido volte a ocorrer.
 
-\subsection{Preservar}
+A coleção dos fatores contribuintes e suas recomendações, são armazenados nos 3 datasets usados neste estudo. As recomendações levam em consideração que a descrição voluntária
+de observadores esta sujeita a erros relacionados a percepção humana.
+
+\subsection{Descrição dos dados}
+
+Aqui faremos uma breve descrição dos campos do dataset que consideramos relevantes para o estudo.
+
+\begin{itemize}
+ \item Equipamento - VARCHAR(45): Campo discreto, descreve o tempo de aeronave envolvida no incidente, no dataset ele pode assumir os valores AVIÃO, HELICOPTERO, PLANADOR, TRIKE e ULTRALEVE
+ \item Fabricante - VARCHAR(45): Campo discreto, descreve o nome do fabricante da aeronave envolvida no incidente. 
+ \item Modelo - VARCHAR(45): Campo discreto, descreve o modelo da aeronave envolvida no incidente. Este campo e os anteriores devem nos demonstrar alguma coincidência relacionada
+ ao tipo de aeronave e fabricante, por exemplo um erro de construção ou de instrução pode aparecer na forma de vários incidentes com o mesmo modelo de aeronave.
+ \item Tipo motor - VARCHAR(45): Campo discreto, descreve o tipo de motor usado na aeronave envolvida no incidente, no dataset ele pode assumir os valores, JATO, PISTÃO
+ , SEM TRAÇÂO (típico de planadores), TURBO EIXO (usado em helicópteros), TURBO HÉLICE
+ \item Fase da operação - VARCHAR(15): Campo discreto, descreve o momento da operação da aeronave em que ocorreu o incidente, dois exemplos de valores para este campo são
+ DECOLAGEM e POUSO.
+ \item Tipo - VARCHAR(80): Campo discreto, descreve de forma macro o que ocorreu com a aeronave no incidente, pode assumir valores como, COLISÃO COM PÁSSARO, SAÍDA DE PISTA
+ entre muitos outros
+ \item Localidade - VARCHAR(100): 
+ \item Aerodromo - VARCHAR(4)
+ \item Fator - VARCHAR(45)
+ \item Aspecto - VARCHAR(45)
+ \item Condicionante - VARCHAR(45)
+\end{itemize}
+
+\section{Preservar}
 
 Onde os dados foram armazenados, quais ferramentas nos usamos
 
