@@ -420,19 +420,49 @@ Falar do objetivo do trabalho
 % creates the second title. It will be ignored for other modes.
 \IEEEpeerreviewmaketitle
 
+\section{Introdução e Objetivos}
+
+Estre trabalho tem por objetivo confirmar ou refutar mitos relacionados as causas de acidentes e incidentes aeronauticos através da análise dos dados resultantes da 
+investigação de acidentes e incidentes aeronauticos pelo CENIPA.
+
+O Centro de Investigação e Prevenção de Acidentes Aeronauticos (CENIPA) foi criado em 1971 como orgão centralizador para o Sistema de Investigação e Prevenção de
+Acidentes Aeronauticos (SIPAER). O objetivo do CENIPA é o de promover a prevenção de acidentes aeronauticos através da reunião, análise de informações e obtenção 
+de conclusões, incluindo a identificação dos fatores contribuintes para a ocorrência, visando a formulação de recomendações sobre a segurança. O Sistema de Investigação
+e Prevenção de Acidentes Aeronáuticos (SIPAER) não trabalha com "causa" de acidente, mas com fatores contribuintes.
+
+Acidente Aeronáutico é toda ocorrência relacionada com a operação de uma aeronave, entre o período em que uma pessoa nela embarca com a intenção de realizar um voo
+, até o momento em que todas as pessoas tenham dela desembarcado e, durante o qual, pelo menos uma das situações abaixo ocorra: \\
+
+\begin{itemize}
+ \item Uma pessoa sofra lesão grave ou morra como resultado de estar na aeronave
+ \item A aeronave sofra dano ou falha estrutural que afete sua resistência estrutural, seu desempenho ou as suas características de voo
+ \item A aeronave seja considerada desaparecida ou o local onde se encontre seja absolutamente inacessível.
+\end{itemize}
+
+\section{Os Datasets}
+
+Para atingir os objetivos acima, utilizamos 3 datasets fornecidos no site do CENIPA
+
+\begin{enumerate}
+ \item Aeronaves
+ \item Ocorrências
+ \item Fatores Contribuintes
+\end{enumerate}
+
+O dataset "Aeronaves" contém informações sobre as aeronaves envolvidas no incidente, relevante a este estudo são as informações de \textbf{equipamento, fabricante, modelo, 
+tipo motor, fase da operação, tipo da operação}
+O dataset "Ocorrencias" cont´em informaç~oes sobre o ocorrido, relevantes a este estudo s~ao as informaç~oes de \textbf{ tipo, localidade e aerodromo }
+Finalmente o dataset
 
 
-\section{Planejamento}
 
-Etapa de planejamento do trabalho
+\subsection{Planejamento}
 
-\section{Coleta dos dados}
+Perguntas que queremos responder com este relatório
 
-Como os dados foram coletados
+\section{Coleta dos dados e qualidade dos dados}
 
-\section{Assegurar}
-
-Como a qualidade dos dados foi garantida
+Como os dados são coletados no CENIPA e o que tivemos que realizar nos dados para que eles fossem utilizáveis
 
 \section{Descrever}
 
@@ -440,19 +470,11 @@ Descrever os campos que compoem os dados
 
 \subsection{Preservar}
 
-Onde os dados foram armazenados
+Onde os dados foram armazenados, quais ferramentas nos usamos
 
 \section{Descobrir}
 
-Quais as perguntas que queremos responder com os dados
-
-\section{Integrar}
-
-Não vamos integrar com ninguem mas deixa essa parte aqui por enquanto
-
-\section{Conclusões}
-
-Analisando os resultados
+As buscas que fizemos nos dados e os resultados que eles revelaram
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
