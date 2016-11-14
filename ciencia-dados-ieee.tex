@@ -504,9 +504,19 @@ Aqui faremos uma breve descrição dos campos do dataset que consideramos releva
  \item Condicionante - VARCHAR(45): Campo discreto, descreve sob que condições o aspecto se apresentou de modo tornar-se o fator principal no incidente.
 \end{itemize}
 
-\section{Preservar}
+\section{Preparação dos dados}
 
-Onde os dados foram armazenados, quais ferramentas nos usamos
+As seguintes atividades foram realizadas nos dados para viabilizar as descobertas.
+
+\begin{itemize}
+ \item Na tabela \textbf{fator contribuinte}, substituimos o valor \textbf{***}, os espaços em branco e \textbf{\\n} por \textbf{;}
+ \item Criar tabela \textbf{fator distinct} com as colunas \textbf{fator}, \textbf{aspecto}, \textbf{condicionante} e \textbf{area} com os fatores mapeados pelo CENIPA
+ \item Na tabela \textbf{aeronave} substituir \textbf{****} e \textbf{***} por espaço em branco
+ \item Na tabela \textbf{ocorrências} substituir \textbf{****}, \textbf{***} e \textbf{NULL} por espaço em branco
+ \item Preencher \textbf{data publicacao} em branco por \textbf{0000-00-00}
+ \item Modificar valores da coluna \textbf{relatorio publicado} de 1 e 0 para sim e não
+ \item Modificar os valores de \textbf{saida de pista} de 1 e o para sim e não
+\end{itemize}
 
 \section{Descobrir}
 

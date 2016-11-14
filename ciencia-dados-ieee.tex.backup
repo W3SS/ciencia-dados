@@ -495,16 +495,23 @@ Aqui faremos uma breve descrição dos campos do dataset que consideramos releva
  DECOLAGEM e POUSO.
  \item Tipo - VARCHAR(80): Campo discreto, descreve de forma macro o que ocorreu com a aeronave no incidente, pode assumir valores como, COLISÃO COM PÁSSARO, SAÍDA DE PISTA
  entre muitos outros
- \item Localidade - VARCHAR(100): 
- \item Aerodromo - VARCHAR(4)
- \item Fator - VARCHAR(45)
- \item Aspecto - VARCHAR(45)
- \item Condicionante - VARCHAR(45)
+ \item Localidade - VARCHAR(100): Campo discreto, descreve o município onde ocorreu o incidente. No caso de incidentes ocorridos em vôo como colisões com pássaros ou perda de
+ motor, a localidade descreve o município que a aeronave estava sobrevoando quando o incidente ocorreu.
+ \item Aerodromo - VARCHAR(4): Campo discreto, descreve o aeródromo onde ocorreu o incidente. Em casos de incidentes ocorridos nas fases onde a aeronave esta fora do solo,
+ este campo assume valores vazios (***) exceto quando o incidente esta relacionado com as fases de aproximação para pouso ou decolagem.
+ \item Fator - VARCHAR(45): Campo discreto, descreve a principal causa do incidente
+ \item Aspecto - VARCHAR(45): Campo discreto, descreve a que aspecto do fator causador o incidente esta relacionado.
+ \item Condicionante - VARCHAR(45): Campo discreto, descreve sob que condições o aspecto se apresentou de modo tornar-se o fator principal no incidente.
 \end{itemize}
 
-\section{Preservar}
+\section{Preparação dos dados}
 
-Onde os dados foram armazenados, quais ferramentas nos usamos
+As seguintes atividades foram realizadas nos dados para viabilizar as descobertas.
+
+Na tabela fator_contribuinte, substituimos o valore ***, os espaços em branco e \n por ;
+Criar tabela fator_distinct com as colunas fator, aspecto, condicionante e area com os fatores mapeados pelo CENIPA
+Na tabela aeronave substituir **** e *** por espaço em branco
+Na tabela ocorrências substituir ****, *** e NULL por espaço em branco
 
 \section{Descobrir}
 
