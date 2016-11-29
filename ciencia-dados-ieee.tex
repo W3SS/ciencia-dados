@@ -344,7 +344,7 @@
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
 % Do not put math or special symbols in the title.
-\title{Estudo sobre a causa raiz dos incidentes e acidentes na aviação civil brasileira}
+\title{Estudo sobre alguns mitos na aviação civil brasileira}
 
 
 % author names and affiliations
@@ -524,7 +524,8 @@ As seguintes atividades foram realizadas nos dados para viabilizar as descoberta
 
 \section{Descobrir}
 
-Focando nos objetivos do trabalho, realizamos as seguintes buscas nos datasets do CENIPAA\\
+Pelo tamanho não muito grande do dataset optamos por uma ferramenta mais simples para realização das buscas, um banco mysql. Focando nos objetivos do trabalho, realizamos 
+as seguintes buscas nos datasets do CENIPAA\\
 
 \begin{enumerate}
  \item Qual fabricante esta mais envolvido em incidente? Há uma percepção na população menos informada que os Airbus tem participado de incidentes aéreos com mais frequência
@@ -545,7 +546,10 @@ Focando nos objetivos do trabalho, realizamos as seguintes buscas nos datasets d
  aviação brasileira são realmente as fases de decolagem e pouso. A literatura aeronautica justifica esse fato relacionando-o a baixa altitude da aeronave durantes essas
  fases de sua operação o que não deixa muita margem para recuperação como por exemplo em caso de pâne em um ou todos os motores. Algo não previsto mas que demonstrou ser
  interessante na análise dos datasets é a quantidade de fatalidades por incidentes nas diversas fases de operação, a maior concentração de fatalidades não estava nem na
- decolagem nem no pouso mas em operação de cruzeiro. Vamos deixar a análise desta questão para o próximo tópico quando mais dados estarão disponíveis.\\
+ decolagem nem no pouso mas em operação de cruzeiro. Acreditamos que tal fato se deve a definição de incidente utilizada pelo CENIPA, vamos relembrar "Uma pessoa sofra 
+ lesão grave ou morra como resultado de estar na aeronave". Esta definição engloba uma série de eventos como, infartos e lesões causadas por turbuLencia que, apesar de não
+ expor a aeronave a uma situação de risco figuram como incidentes. Infelizmente o dataset não contem detalhes do incidente suficientes para conseguirmos averiguar os
+ grupos de incidentes.\\
  
  \item A maioria dos incidentes esta realmente relacionado a falha humana? Como no anterior, especialistas em aviação afirmam que, dado o nível de automatização e salvaguardas 
  presente hoje nas aeronaves, incidentes são geralmente causados por intervenção humana inadequada em alguma fase da operação.\\
@@ -569,7 +573,7 @@ Focando nos objetivos do trabalho, realizamos as seguintes buscas nos datasets d
  humana tinhamos em mente apenas erros do piloto. Embora a busca tenha confirmado esta percepção, é interessante notar que o CENIPA considera como falha humana um leque 
  muito maior de fatores que apenas o erro do piloto, além deles também temos a falha de comunicação entre o piloto e a organização, falhas organizacionais e falhas por 
  falta de treinamento inicial ou atualização. Voltando a questão original, é interessante notar que os fatores erro do piloto e questões organizacionais não só figuram 
- entre os mais contribuintes a incidentes mas esta quase 4x mais presente em incidentes que o  terceiro fator mais presente.\\
+ entre os mais contribuintes a incidentes mas esta quase 4x mais presente em incidentes que o terceiro fator mais presente.\\
  
 \end{enumerate}
 
@@ -712,10 +716,15 @@ Comunicação                                                                  &
 
 \section{Conclusão}
 
-Enfrentamos os problemas relacionados em sala de aula
-- quem construiu o dataset tinha o que em mente?
-- falta de padronização dados não existentes foram representados de várias formas
-- utilização do dataset precisou de uma pesquisa em paralelo pois documentação não era boa
+Acreditamos que um dos principais aprendizados deste trabalho foi entender que, em algumas situações, boa parte do controle do ciclo de vida dos dados esta sob responsabilidade
+de uma pessoa ou grupo de pessoas diferente daquele que vai realizar as descobertas sobre os dados, levando o grupo a algumas situações como as exemplificadas nos próximos
+parágrafos.
+
+O dicionário de dados fornecido com o Dataset não explicava o significado de alguns dos dados como por exemplo o campo \textbf{operador}. O mesmo campo era preenchido por
+valores aos quais não conseguimos referências alguma o que impactou algumas questões que pretendiamos desvendar.
+
+O dataset carecia de padronização quando os dados não estavam disponíveis, hora era uma string vazia, hora era NULL, hora era 0. Tinha falhas de preenchimento, 1013 ocorrências
+não tinha nenhum fator relacionado.
 
 % trigger a \newpage just before the given reference
 % number - used to balance the columns on the last page

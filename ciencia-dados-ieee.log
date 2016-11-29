@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.10)  27 NOV 2016 15:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.10)  28 NOV 2016 22:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -440,115 +440,118 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 527--528
+Underfull \hbox (badness 10000) in paragraph at lines 527--529
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 530--532
+Underfull \hbox (badness 10000) in paragraph at lines 531--533
 
  []
 
 
-Underfull \hbox (badness 2799) in paragraph at lines 533--540
+Underfull \hbox (badness 2799) in paragraph at lines 534--541
 \OT1/ptm/m/n/10 rela-ciona-dos na \OT1/ptm/b/n/10 ta-ble 1\OT1/ptm/m/n/10 . Pod
 e-mos no-tar que no
  []
 
 
-Underfull \hbox (badness 1596) in paragraph at lines 533--540
+Underfull \hbox (badness 1596) in paragraph at lines 534--541
 \OT1/ptm/m/n/10 que tange quan-ti-dade de aeron-aves en-volvi-das em
  []
 
 
-Underfull \hbox (badness 2913) in paragraph at lines 533--540
+Underfull \hbox (badness 2913) in paragraph at lines 534--541
 \OT1/ptm/m/n/10 ape-sar da AIR-BUS ser o menor fab-ri-cante com
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 533--540
+Underfull \hbox (badness 10000) in paragraph at lines 534--541
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 541--543
+Underfull \hbox (badness 10000) in paragraph at lines 542--544
 
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 544--549
+Underfull \hbox (badness 2662) in paragraph at lines 545--553
 \OT1/ptm/m/n/10 rela-ciona-dos na \OT1/ptm/b/n/10 ta-ble 2\OT1/ptm/m/n/10 . Os 
 da-dos con-fir-mam a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 544--549
+Underfull \hbox (badness 10000) in paragraph at lines 545--553
 
  []
 
 
-Underfull \hbox (badness 3612) in paragraph at lines 550--552
+Underfull \hbox (badness 3612) in paragraph at lines 554--556
 \OT1/ptm/m/n/10 s[]ao geral-mente cau-sa-dos por interven[][]ao hu-mana
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 550--552
+Underfull \hbox (badness 10000) in paragraph at lines 554--556
 
  []
 
 
-Underfull \hbox (badness 1454) in paragraph at lines 557--558
+Underfull \hbox (badness 1454) in paragraph at lines 561--562
 []\OT1/ptm/b/n/10 Comunica[][]ao: \OT1/ptm/m/n/10 Fal-has de comunica[][]ao en-
 tre a
- []
-
-
-Underfull \hbox (badness 5203) in paragraph at lines 560--561
-\OT1/ptm/m/n/10 ad-ver-sas como tem-pes-ta-dos, nevoeiro, nu-vens
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 2717) in paragraph at lines 565--566
+Underfull \hbox (badness 5203) in paragraph at lines 564--565
+\OT1/ptm/m/n/10 ad-ver-sas como tem-pes-ta-dos, nevoeiro, nu-vens
+ []
+
+
+Underfull \hbox (badness 2717) in paragraph at lines 569--570
 []\OT1/ptm/b/n/10 Treinamento: \OT1/ptm/m/n/10 Falta de treina-mento ini-cial o
 u
  []
 
 
-Underfull \hbox (badness 5832) in paragraph at lines 568--573
+Underfull \hbox (badness 5832) in paragraph at lines 572--577
 []\OT1/ptm/m/n/10 NAs bus-cas nos datasets cheg-amos aos val-ores
  []
 
 
-Underfull \hbox (badness 7151) in paragraph at lines 568--573
+Underfull \hbox (badness 7151) in paragraph at lines 572--577
 \OT1/ptm/m/n/10 rela-ciona-dos na \OT1/ptm/b/n/10 ta-ble 3\OT1/ptm/m/n/10 . Qua
 ndo colo-camos o
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--573
+Underfull \hbox (badness 10000) in paragraph at lines 572--577
 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 576.
+               Default added (so using `tbp') on input line 580.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 580.
+(Font)              <8> on input line 584.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 580.
+(Font)              <6> on input line 584.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 590.
+               Default added (so using `tbp') on input line 594.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 610.
+               Default added (so using `tbp') on input line 614.
 
-[3]
+
+Underfull \vbox (badness 1107) has occurred while \output is active []
+
+ [3]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -577,7 +580,7 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on ciencia-dados-ieee.pdf (4 pages, 77919 bytes).
+Output written on ciencia-dados-ieee.pdf (4 pages, 79085 bytes).
 PDF statistics:
  38 PDF objects out of 1000 (max. 8388607)
  26 compressed objects within 1 object stream
