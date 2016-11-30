@@ -404,7 +404,7 @@ Email: suyinhe@gmail.com}
 \begin{abstract}
 Ciência de dados tem atraído o interesse de várias instituições recentemente. A quantidade considerável de dados armazenados tem viabilizado análises e respondido perguntas
 que não eram possíveis com a quantidade de dados e as técnicas de análise anteriores. Entender o ciclo de vida dos dados e aplicar operações em datasets para responder
-perguntas é uma habilidade cuja demanda esta em ascensão. Este documento é o trabalho final dos estudantes Su e Hamilton para disciplina de Ciência de Dados (PCS-5031), nele
+perguntas é uma habilidade cuja demanda esta em ascensão. Este documento é o trabalho dos estudantes Su e Hamilton para disciplina de Ciência de Dados (PCS-5031), nele
 analisamos os dados coletados em um período de 10 anos pelo Centro Nacional de Investigação e Prevenção de Acidentes Aeronauticos (CENIPAA) para confirmar ou refutar alguns
 mitos relacionados a aviação no Brasil.
 \end{abstract}
@@ -426,8 +426,8 @@ mitos relacionados a aviação no Brasil.
 
 \section{Introdução e Objetivos}
 
-Estre trabalho tem por objetivo confirmar ou refutar mitos relacionados as causas de acidentes e incidentes aeronauticos através da análise dos dados resultantes da 
-investigação de acidentes e incidentes aeronauticos pelo CENIPA.
+Estre trabalho tem por objetivo confirmar ou refutar mitos relacionados as causas de acidentes e incidentes aeronauticos através da análise dos dados resultantes das 
+investigações pelo CENIPA.
 
 O Centro de Investigação e Prevenção de Acidentes Aeronauticos (CENIPA) foi criado em 1971 como orgão centralizador para o Sistema de Investigação e Prevenção de
 Acidentes Aeronauticos (SIPAER). O objetivo do CENIPA é o de promover a prevenção de acidentes aeronauticos através da reunião, análise de informações e obtenção 
@@ -460,12 +460,12 @@ Finalmente o dataset de fatores contribuintes contem os dados de \textbf{ fator,
 
 \subsection{Planejamento}
 
-Como mencionado anteriormente, este estudo tem o objetivo de desmistificar ou confirmar alguns fatos relacionados a aviação no Brasil. Perguntas que estamos tentando
+Como mencionado anteriormente, este estudo tem o objetivo de refutar ou confirmar alguns mitos relacionados a aviação no Brasil. Perguntas que estamos tentando
 responder são: 
 
 \begin{itemize}
  \item Qual fabricante esta mais envolvido em incidente? Há uma percepção na população menos informada que os Airbus tem participado de incidentes aéreos com mais frequência
- que os Boeings.
+ que outros fabricantes.
  \item A maioria dos incidentes aconteceu na decolagem ou no pouso? Em várias entrevistas, especialistas em aviação concordam ao afirmar que essas duas fases são as
  mais perigosas.
  \item A maioria dos incidentes esta realmente relacionado a falha humana? Como no anterior, especialistas em aviação afirmam que, dado o nível de automatização e salvaguardas 
@@ -524,8 +524,8 @@ As seguintes atividades foram realizadas nos dados para viabilizar as descoberta
 
 \section{Descobrir}
 
-Pelo tamanho não muito grande do dataset optamos por uma ferramenta mais simples para realização das buscas, um banco mysql. Focando nos objetivos do trabalho, realizamos 
-as seguintes buscas nos datasets do CENIPAA\\
+Pelo pequeno tamanho do dataset optamos por uma ferramenta mais simples, um banco mysql. Focando nos objetivos do trabalho, realizamos as seguintes buscas nos datasets 
+do CENIPAA\\
 
 \begin{enumerate}
  \item Qual fabricante esta mais envolvido em incidente? Há uma percepção na população menos informada que os Airbus tem participado de incidentes aéreos com mais frequência
@@ -548,8 +548,7 @@ as seguintes buscas nos datasets do CENIPAA\\
  interessante na análise dos datasets é a quantidade de fatalidades por incidentes nas diversas fases de operação, a maior concentração de fatalidades não estava nem na
  decolagem nem no pouso mas em operação de cruzeiro. Acreditamos que tal fato se deve a definição de incidente utilizada pelo CENIPA, vamos relembrar "Uma pessoa sofra 
  lesão grave ou morra como resultado de estar na aeronave". Esta definição engloba uma série de eventos como, infartos e lesões causadas por turbuLencia que, apesar de não
- expor a aeronave a uma situação de risco figuram como incidentes. Infelizmente o dataset não contem detalhes do incidente suficientes para conseguirmos averiguar os
- grupos de incidentes.\\
+ expor a aeronave a uma situação de risco figuram como incidentes.\\
  
  \item A maioria dos incidentes esta realmente relacionado a falha humana? Como no anterior, especialistas em aviação afirmam que, dado o nível de automatização e salvaguardas 
  presente hoje nas aeronaves, incidentes são geralmente causados por intervenção humana inadequada em alguma fase da operação.\\
