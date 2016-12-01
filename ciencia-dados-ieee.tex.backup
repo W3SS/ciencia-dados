@@ -357,12 +357,12 @@ Programa de Pós Graduação em Engenharia Elétrica\\
 São Paulo, SP, Brasil\\
 Email: hamiltonii@gmail.com}
 \and
-\IEEEauthorblockN{Su Yin he}
+\IEEEauthorblockN{Su Yinhe}
 \IEEEauthorblockA{Universidade de São Paulo (USP)\\
 Escola Politécnica - Engenharia de Computação\\
 Programa de Pós Graduação em Engenharia Elétrica\\
 São Paulo, SP, Brasil\\
-Email: suyinhe@gmail.com}
+Email: suyinhe.syh@gmail.com}
 }
 
 % conference papers do not typically use \thanks and this command
@@ -402,11 +402,12 @@ Email: suyinhe@gmail.com}
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-Ciência de dados tem atraído o interesse de várias instituições recentemente. A quantidade considerável de dados armazenados tem viabilizado análises e respondido perguntas
-que não eram possíveis com a quantidade de dados e as técnicas de análise anteriores. Entender o ciclo de vida dos dados e aplicar operações em datasets para responder
-perguntas é uma habilidade cuja demanda esta em ascensão. Este documento é o trabalho final dos estudantes Su e Hamilton para disciplina de Ciência de Dados (PCS-5031), nele
-analisamos os dados coletados em um período de 10 anos pelo Centro Nacional de Investigação e Prevenção de Acidentes Aeronauticos (CENIPAA) para confirmar ou refutar alguns
-mitos relacionados a aviação no Brasil.
+Ciência de dados tem atraído o interesse de várias instituições recentemente. A era da internet com o rápido desenvolvimento da Web 1.0, 2.0 e 3.0 e Internet das coisas,
+principalmente depois de meados de 00, acelerou bastante a geração de dados tanto estruturados quanto semiestruturados e não estruturados. Ao analisar esse montante de 
+dados, é possível descobrir respostas que podem ser muito úteis à academia, às instituições e aos governos. Entender o ciclo de vida dos dados e aplicar operações em 
+datasets para responder perguntas é uma habilidade em ascensão. Este documento é o trabalho dos estudantes Su e Hamilton para disciplina de Ciência de Dados (PCS-5031), 
+nele serão analisados os dados coletados em um período de 10 anos pelo Centro Nacional de Investigação e Prevenção de Acidentes Aeronauticos (CENIPAA) para confirmar ou
+refutar alguns mitos relacionados a aviação no Brasil.
 \end{abstract}
 
 % no keywords
@@ -426,20 +427,20 @@ mitos relacionados a aviação no Brasil.
 
 \section{Introdução e Objetivos}
 
-Estre trabalho tem por objetivo confirmar ou refutar mitos relacionados as causas de acidentes e incidentes aeronauticos através da análise dos dados resultantes da 
-investigação de acidentes e incidentes aeronauticos pelo CENIPA.
+Estre trabalho tem por objetivo confirmar ou refutar mitos relacionados às causas de acidentes e incidentes aeronáuticos através da análise dos dados resultantes das 
+investigações pelo CENIPA.
 
 O Centro de Investigação e Prevenção de Acidentes Aeronauticos (CENIPA) foi criado em 1971 como orgão centralizador para o Sistema de Investigação e Prevenção de
-Acidentes Aeronauticos (SIPAER). O objetivo do CENIPA é o de promover a prevenção de acidentes aeronauticos através da reunião, análise de informações e obtenção 
+Acidentes Aeronauticos (SIPAER). O objetivo do CENIPA é o de promover a prevenção de acidentes aeronáuticos através da reunião, análise de informações e obtenção 
 de conclusões, incluindo a identificação dos fatores contribuintes para a ocorrência, visando a formulação de recomendações sobre a segurança. O Sistema de Investigação
 e Prevenção de Acidentes Aeronáuticos (SIPAER) não trabalha com "causa" de acidente, mas com fatores contribuintes.
 
-Acidente Aeronáutico é toda ocorrência relacionada com a operação de uma aeronave, entre o período em que uma pessoa nela embarca com a intenção de realizar um voo
+Acidente Aeronáutico é toda ocorrência relacionada com a operação de uma aeronave, entre o período em que uma pessoa nela embarca com a intenção de realizar um vôo
 , até o momento em que todas as pessoas tenham dela desembarcado e, durante o qual, pelo menos uma das situações abaixo ocorra: \\
 
 \begin{itemize}
  \item Uma pessoa sofra lesão grave ou morra como resultado de estar na aeronave
- \item A aeronave sofra dano ou falha estrutural que afete sua resistência estrutural, seu desempenho ou as suas características de voo
+ \item A aeronave sofra dano ou falha estrutural que afete sua resistência estrutural, seu desempenho ou as suas características de vôo
  \item A aeronave seja considerada desaparecida ou o local onde se encontre seja absolutamente inacessível.
 \end{itemize}
 
@@ -454,57 +455,68 @@ Para atingir os objetivos acima, utilizamos 3 datasets fornecidos no site do CEN
 \end{enumerate}
 
 O dataset "Aeronaves" contém informações sobre as aeronaves envolvidas no incidente, relevante a este estudo são as informações de \textbf{equipamento, fabricante, modelo, 
-tipo motor, fase da operação, tipo da operação, nivel de danos e quantidade de fatalidades}
-O dataset "Ocorrencias" contém informações sobre o ocorrido, relevantes a este estudo são as informaçães de \textbf{ tipo, localidade, dia da ocorrencia e horário UTC  }
-Finalmente o dataset de fatores contribuintes contem os dados de \textbf{ fator, aspecto condicionante e área } dos incidentes ocorridos com as aeronaves.
+tipo motor, fase da operação, tipo da operação, nivel de danos e quantidade de fatalidades}. O dataset "Ocorrencias" contém informações sobre o ocorrido, relevantes a 
+este estudo são as informaçães de \textbf{ tipo, localidade}. Finalmente, o dataset de fatores contribuintes contém os dados de \textbf{ fator, aspecto, condicionante e área } 
+dos incidentes ocorridos com as aeronaves.
 
 \subsection{Planejamento}
 
-Como mencionado anteriormente, este estudo tem o objetivo de desmistificar ou confirmar alguns fatos relacionados a aviação no Brasil. Perguntas que estamos tentando
+Como mencionado anteriormente, este estudo tem o objetivo de refutar ou confirmar alguns mitos relacionados à aviação no Brasil. Perguntas que tentaremos
 responder são: 
 
 \begin{itemize}
- \item Qual fabricante esta mais envolvido em incidente? Há uma percepção na população menos informada que os Airbus tem participado de incidentes aéreos com mais frequência
- que os Boeings.
+ \item Qual fabricante está mais envolvido em incidente? Há uma percepção na população menos informada que os Airbus têm participado de incidentes aéreos com mais frequência
+ que outros fabricantes.
  \item A maioria dos incidentes aconteceu na decolagem ou no pouso? Em várias entrevistas, especialistas em aviação concordam ao afirmar que essas duas fases são as
  mais perigosas.
- \item A maioria dos incidentes esta realmente relacionado a falha humana? Como no anterior, especialistas em aviação afirmam que, dado o nível de automatização e salvaguardas 
- presente hoje nas aeronaves, incidentes são geralmente causados por intervenção humana inadequada em alguma fase da operação.
+ \item A maioria dos incidentes está realmente relacionado à falha humana? Como no anterior, especialistas em aviação afirmam que, dado o nível de automatização e salvaguardas 
+ presentes hoje nas aeronaves, incidentes são geralmente causados por intervenção humana inadequada em alguma fase da operação.
 \end{itemize}
 
 
 \subsection{Coleta dos dados e qualidade dos dados}
 
-O método investigativo do SIPAER utiliza probabilidades e hipoeteses para esclarecer as causas e os fatores contribuintes de um incidente aéreo. O CENIPA mantém um 
+O método investigativo do SIPAER utiliza probabilidades e hipóteses para esclarecer as causas e os fatores contribuintes de um incidente aéreo. O CENIPA mantém um 
 cemitério de aeronaves que usa para estudos e como base histórica de acidentes passados, combinado com a obtenção de declarações voluntárias de observadores e dados do 
-gravador de vôo da aeronave, formula-se um relatório que tem, entre outras informações, o que acredita serem as causas e os fatores contribuintes além de recomendações
+gravador de vôo da aeronave, formula-se um relatório que tem, entre outras informações, o que acredita ser as causas e os fatores contribuintes além de recomendações
 às companhias aéreas para evitar que um incidente parecido volte a ocorrer.
 
-A coleção dos fatores contribuintes e suas recomendações, são armazenados nos 3 datasets usados neste estudo. As recomendações levam em consideração que a descrição voluntária
-de observadores esta sujeita a erros relacionados a percepção humana.
+A coleção dos fatores contribuintes e suas recomendações, são armazenados no dataset usados neste estudo. As recomendações levam em consideração que a descrição voluntária
+de observadores está sujeita a erros relacionados a percepção humana.
 
 \subsection{Descrição dos dados}
 
-Aqui faremos uma breve descrição dos campos do dataset que consideramos relevantes para o estudo.
+Aqui faremos uma breve descrição dos campos do dataset que consideramos relevantes para o estudo.\\
 
 \begin{itemize}
- \item Equipamento - VARCHAR(45): Campo discreto, descreve o tempo de aeronave envolvida no incidente, no dataset ele pode assumir os valores AVIÃO, HELICOPTERO, PLANADOR, TRIKE e ULTRALEVE
- \item Fabricante - VARCHAR(45): Campo discreto, descreve o nome do fabricante da aeronave envolvida no incidente. 
- \item Modelo - VARCHAR(45): Campo discreto, descreve o modelo da aeronave envolvida no incidente. Este campo e os anteriores devem nos demonstrar alguma coincidência relacionada
- ao tipo de aeronave e fabricante, por exemplo um erro de construção ou de instrução pode aparecer na forma de vários incidentes com o mesmo modelo de aeronave.
- \item Tipo motor - VARCHAR(45): Campo discreto, descreve o tipo de motor usado na aeronave envolvida no incidente, no dataset ele pode assumir os valores, JATO, PISTÃO
- , SEM TRAÇÂO (típico de planadores), TURBO EIXO (usado em helicópteros), TURBO HÉLICE
- \item Fase da operação - VARCHAR(15): Campo discreto, descreve o momento da operação da aeronave em que ocorreu o incidente, dois exemplos de valores para este campo são
- DECOLAGEM e POUSO.
- \item Tipo - VARCHAR(80): Campo discreto, descreve de forma macro o que ocorreu com a aeronave no incidente, pode assumir valores como, COLISÃO COM PÁSSARO, SAÍDA DE PISTA
- entre muitos outros
- \item Localidade - VARCHAR(100): Campo discreto, descreve o município onde ocorreu o incidente. No caso de incidentes ocorridos em vôo como colisões com pássaros ou perda de
- motor, a localidade descreve o município que a aeronave estava sobrevoando quando o incidente ocorreu.
- \item Aerodromo - VARCHAR(4): Campo discreto, descreve o aeródromo onde ocorreu o incidente. Em casos de incidentes ocorridos nas fases onde a aeronave esta fora do solo,
- este campo assume valores vazios (***) exceto quando o incidente esta relacionado com as fases de aproximação para pouso ou decolagem.
- \item Fator - VARCHAR(45): Campo discreto, descreve a principal causa do incidente
- \item Aspecto - VARCHAR(45): Campo discreto, descreve a que aspecto do fator causador o incidente esta relacionado.
- \item Condicionante - VARCHAR(45): Campo discreto, descreve sob que condições o aspecto se apresentou de modo tornar-se o fator principal no incidente.
+ \item Datase Aeronaves
+ 
+ \begin{itemize}
+  \item Equipamento - VARCHAR(45): Campo discreto, descreve o tipo de aeronave envolvida no incidente, no dataset aerenaves le pode assumir os valores AVIÃO, HELICOPTERO, PLANADOR, TRIKE e ULTRALEVE
+  \item Fabricante - VARCHAR(45): Campo discreto, descreve o nome do fabricante da aeronave envolvida no incidente. 
+  \item Modelo - VARCHAR(45): Campo discreto, descreve o modelo da aeronave envolvida no incidente. Este campo e os anteriores devem nos demonstrar alguma coincidência relacionada
+  ao tipo de aeronave e fabricante, por exemplo um erro de construção ou de instrução pode aparecer na forma de vários incidentes com o mesmo modelo de aeronave.
+  \item Tipo motor - VARCHAR(45): Campo discreto, descreve o tipo de motor usado na aeronave envolvida no incidente, no dataset ele pode assumir os valores, JATO, PISTÃO
+  , SEM TRAÇÂO (típico de planadores), TURBO EIXO (usado em helicópteros), TURBO HÉLICE
+  \item Fase da operação - VARCHAR(15): Campo discreto, descreve o momento da operação da aeronave em que ocorreu o incidente, dois exemplos de valores para este campo são
+  DECOLAGEM e POUSO.
+  \item Tipo de Operação - VARCHAR(20): Campo discreto, descreve o tipo de operação como particular, táxi aéreo, entre outros.
+  \item Nível de dano - VARCHAR(10): Campo discreto, descreve o nível de dano sofrido pela aeronave.
+  \item Quantidade de fatalidades - INT(11): Campo discreto, descreve a quantidade de fatalidades na aeronave devido à ocorrência.\\ 
+ \end{itemize}
+
+ \item Dataset Ocorrecias
+ \begin{itemize}
+  \item Tipo - VARCHAR(80): Campo discreto, descreve de forma macro o que ocorreu com a aeronave no incidente, pode assumir valores como, COLISÃO COM PÁSSARO, SAÍDA DE PISTA
+  entre muitos outros
+  \item Localidade - VARCHAR(100): Campo discreto, descreve o município onde ocorreu o incidente. No caso de incidentes ocorridos em vôo como colisões com pássaros ou perda de
+  motor, a localidade descreve o município que a aeronave estava sobrevoando quando o incidente ocorreu.
+  \item Fator - VARCHAR(45): Campo discreto, descreve a principal causa do incidente
+  \item Aspecto - VARCHAR(45): Campo discreto, descreve a que aspecto do fator causador o incidente esta relacionado.
+  \item Condicionante - VARCHAR(45): Campo discreto, descreve sob que condições o aspecto se apresentou de modo tornar-se o fator principal no incidente. 
+  \item Área - VARCHAR(15): Campo discreto, descreve a área do fator. \\
+ \end{itemize}
+ 
 \end{itemize}
 
 \section{Preparação dos dados}
@@ -513,9 +525,9 @@ As seguintes atividades foram realizadas nos dados para viabilizar as descoberta
 
 \begin{itemize}
  \item Na tabela \textbf{fator contribuinte}, substituimos o valor \textbf{***}, os \textbf{espaços em branco} e \textbf{marcadores de fim de linha} por \textbf{;}
- \item Ainda na tabela \textbf{fator contribuinte} aumentamos a quantidade de caracteres na coluna \textbf{area}
+ \item Ainda na tabela \textbf{fator contribuinte} substituímos \textbf{***} por string vazia e aumentamos o número de caracteres da coluna \textbf{area}.
  \item Criar tabela \textbf{fator distinct} com as colunas \textbf{fator}, \textbf{aspecto}, \textbf{condicionante} e \textbf{area} com os fatores mapeados pelo CENIPA
- \item Na tabela \textbf{aeronave} substituir \textbf{****} e \textbf{***} por string vazia, aumentamos o numero de caracteres nas colunas \textbf{fase operacao} e \textbf{nivel dano}. Os valores NULL de \textbf{quantidade fatalidade} foram substituidos por 0 
+ \item Na tabela \textbf{aeronave} substituir \textbf{****} e \textbf{***} por string vazia, aumentamos o numero de caracteres nas colunas \textbf{fase operacao} e \textbf{nivel dano}. Os valores NULL de \textbf{quantidade fatalidade} foram substituídos por 0 
  \item Na tabela \textbf{ocorrências} substituir \textbf{****}, \textbf{***} e \textbf{NULL} por string vazia
  \item Preencher \textbf{data publicacao} em branco por \textbf{0000-00-00}
  \item Modificar valores da coluna \textbf{relatorio publicado} de \textbf{1} e \textbf{0} para \textbf{sim} e \textbf{não}
@@ -524,19 +536,21 @@ As seguintes atividades foram realizadas nos dados para viabilizar as descoberta
 
 \section{Descobrir}
 
-Focando nos objetivos do trabalho, realizamos as seguintes buscas nos datasets do CENIPAA\\
+Pelo pequeno tamanho do dataset optamos por uma ferramenta mais simples, um banco mysql. Focando nos objetivos do trabalho, realizamos as seguintes buscas nos datasets 
+do CENIPAA\\
 
 \begin{enumerate}
- \item Qual fabricante esta mais envolvido em incidente? Há uma percepção na população menos informada que os Airbus tem participado de incidentes aéreos com mais frequência
+ \item Qual fabricante está mais envolvido em incidente? Há uma percepção na população menos informada que os Airbus tem participado de incidentes aéreos com mais frequência
  que os Boeings?\\
  
- Realizando buscas nos datasets chegamos aos valores relacionados na \textbf{table 1}. Podemos notar que no que tange quantidade de aeronaves envolvidas em incidentes,
- a AIRBUS não só não é o maior fabricante com aeronaves envolvidas em incidentes como também é a que menos se envolveu em incidentes em território brasileiro nos últimos
+ Realizando buscas nos datasets chegamos aos valores relacionados na \textbf{table 1}. Podemos notar que no que tange a quantidade de aeronaves envolvidas em incidentes,
+ a AIRBUS não só não é o fabricante com maior número de aeronaves envolvidas em incidentes como também é a que menos se envolveu em incidentes em território brasileiro nos últimos
  10 anos. Esta tabela também demonstra uma faceta não prevista do nosso estudo, apesar da AIRBUS ser o menor fabricante com incidentes é de longe a maior média de fatalidades 
- por incidente chegando a ter uma média quase 3x maior que o segundo fabricante. Acreditamos que tal fato se deve a natureza do produto comercializado pelo fabricante. 
- Olhando o catálogo da Airbus disponível na internet a mesma só comercializa aeronaves de grande porte, assim um incidente naturalmente tende a ter várias fatalidades,
- os outros fabricantes como Boeing e Cessna tem uma variedade muito maior de aeronaves, desde monopostos de pouca capacidade de passageiros até jatos de transporte comercial
- de passageiros. A fabricante Neiva (Embraer) produz apenas monopostos para aplicações agrícolas.\\
+ por incidente chegando a ter uma média quase 3x maior que o segundo fabricante em número de aeronaves envolvidas. Um único acidente causou 199 fatalidades durante um pouso em 1998 
+ (AIRBUS INDUSTRIE A320-233 JATO). Acreditamos que tal fato se deve a natureza do produto comercializado pelo fabricante. Pesquisando o catálogo da Airbus disponível na 
+ internet a mesma só comercializa aeronaves de grande porte, assim um incidente naturalmente tende a ter várias fatalidades, os outros fabricantes como Boeing Company e Cessna 
+ tem uma variedade muito maior de aeronaves, desde monopostos de pouca capacidade de passageiros até jatos de transporte comercial de passageiros. A fabricante Neiva 
+ (Embraer) produz apenas monopostos para aplicações agrícolas.\\
  
  \item A maioria dos incidentes aconteceu na decolagem ou no pouso? Em várias entrevistas, especialistas em aviação concordam ao afirmar que essas duas fases são as
  mais perigosas.\\
@@ -546,11 +560,10 @@ Focando nos objetivos do trabalho, realizamos as seguintes buscas nos datasets d
  fases de sua operação o que não deixa muita margem para recuperação como por exemplo em caso de pâne em um ou todos os motores. Algo não previsto mas que demonstrou ser
  interessante na análise dos datasets é a quantidade de fatalidades por incidentes nas diversas fases de operação, a maior concentração de fatalidades não estava nem na
  decolagem nem no pouso mas em operação de cruzeiro. Acreditamos que tal fato se deve a definição de incidente utilizada pelo CENIPA, vamos relembrar "Uma pessoa sofra 
- lesão grave ou morra como resultado de estar na aeronave". Esta definição engloba uma série de eventos como, infartos e lesões causadas por turbuLencia que, apesar de não
- expor a aeronave a uma situação de risco figuram como incidentes. Infelizmente o dataset não contem detalhes do incidente suficientes para conseguirmos averiguar os
- grupos de incidentes.\\
+ lesão grave ou morra como resultado de estar na aeronave". Esta definição engloba uma série de eventos como, infartos e lesões causadas por turbulência que, apesar de não
+ expor a aeronave a uma situação de risco figuram como incidentes.\\
  
- \item A maioria dos incidentes esta realmente relacionado a falha humana? Como no anterior, especialistas em aviação afirmam que, dado o nível de automatização e salvaguardas 
+ \item A maioria dos incidentes está realmente relacionado à falha humana? Como no anterior, especialistas em aviação afirmam que, dado o nível de automatização e salvaguardas 
  presente hoje nas aeronaves, incidentes são geralmente causados por intervenção humana inadequada em alguma fase da operação.\\
  
  Para responder a esta pergunta foi necessário um agrupamento pois o dataset \textbf{Fatores Contribuintes} possui 4118 registros em que identificamos 63 fatores únicos os quais
@@ -568,11 +581,13 @@ Focando nos objetivos do trabalho, realizamos as seguintes buscas nos datasets d
   \item \textbf{Treinamento:} Falta de treinamento inicial ou atualização
  \end{itemize}
  
- NAs buscas nos datasets chegamos aos valores relacionados na \textbf{table 3}. Quando colocamos o questionamento se a maioria das ocorrências estava relacionada a falha
+ NAs buscas nos datasets chegamos aos valores relacionados na \textbf{table 3}. Quando colocamos o questionamento se a maioria das ocorrências estava relacionada à falha
  humana tinhamos em mente apenas erros do piloto. Embora a busca tenha confirmado esta percepção, é interessante notar que o CENIPA considera como falha humana um leque 
  muito maior de fatores que apenas o erro do piloto, além deles também temos a falha de comunicação entre o piloto e a organização, falhas organizacionais e falhas por 
  falta de treinamento inicial ou atualização. Voltando a questão original, é interessante notar que os fatores erro do piloto e questões organizacionais não só figuram 
- entre os mais contribuintes a incidentes mas esta quase 4x mais presente em incidentes que o terceiro fator mais presente.\\
+ entre os mais contribuintes a incidentes mas está quase 4x mais presente em incidentes que o terceiro fator mais presente. E conforme a tabela 4, os fatores que causaram 
+ mais fatalidades são julgamento de pilotagem, planejamento de vôo e supervisão gerencial, mas os que causaram maiores médias de fatalidades de aeronaves foram dor, 
+ ansiedade, clima organizacional, estresse e sistemas de apoio. A maioria desses fatores pertencem aos grupos piloto e organização.\\
  
 \end{enumerate}
 
@@ -716,12 +731,14 @@ Comunicação                                                                  &
 \section{Conclusão}
 
 Acreditamos que um dos principais aprendizados deste trabalho foi entender que, em algumas situações, boa parte do controle do ciclo de vida dos dados esta sob responsabilidade
-de uma pessoa ou grupo de pessoas diferente daquele que vai realizar as descobertas sobre os dados. Desta forma alguns questionamentos foram levantados 
+de uma pessoa ou grupo de pessoas diferente daquele que vai realizar as descobertas sobre os dados, levando o grupo a algumas situações como as exemplificadas nos próximos
+parágrafos.
 
 O dicionário de dados fornecido com o Dataset não explicava o significado de alguns dos dados como por exemplo o campo \textbf{operador}. O mesmo campo era preenchido por
 valores aos quais não conseguimos referências alguma o que impactou algumas questões que pretendiamos desvendar.
 
-O dataset carecia de padronização quando os dados não estavam disponíveis, hora era uma string vazia, hora era NULL, hora era 0. Tinha falhas de preenchimento, 
+O dataset carecia de padronização quando os dados não estavam disponíveis, hora era uma string vazia, hora era NULL, hora era 0. Tinha falhas de preenchimento, 1013 ocorrências
+não tinha nenhum fator relacionado.
 
 % trigger a \newpage just before the given reference
 % number - used to balance the columns on the last page
@@ -745,19 +762,7 @@ O dataset carecia de padronização quando os dados não estavam disponíveis, h
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
-\begin{thebibliography}{1}
 
-\bibitem{Amazon2016}
-{AMAZON. \emph{{Amazon Media Room Press Release}}.
-[S.l.], 2016. 2~p.}
-
-\bibitem{Bash2015a}
-{KEYUN, R. et al. \emph{{Advances in Digital Forensics IV}}. 7. ed. Orlando:
-  [s.n.], 2011. 35--46~p.
-ISSN 1098-6596.
-ISBN 9788578110796.}
-
-\end{thebibliography}
 
 % that's all folks
 \end{document}
